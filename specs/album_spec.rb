@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require "minitest/pg"
+require "minitest/rg"
 
 require_relative "../models/artist"
 
