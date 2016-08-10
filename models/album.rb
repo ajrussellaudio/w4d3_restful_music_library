@@ -22,6 +22,11 @@ class Album
     SqlRunner.run( sql )
   end
 
+  def self.destroy( id )
+    sql = "DELETE FROM albums WHERE id = #{id};"
+    SqlRunner.run( sql )
+  end
+
   def initialize( options )
     @title     = options["title"]
     @artist_id = options["artist_id"].to_i

@@ -61,7 +61,6 @@ end
 
 get '/albums' do
   @albums = Album.all
-  binding.pry
   erb(:'albums/index')
 end
 
@@ -79,4 +78,9 @@ end
 post '/albums/:id' do
   Album.update(params)
   redirect to "/albums/#{params['id']}"
+end
+
+post '/albums/:id/delete' do
+  Album.destroy( params['id'] )
+  redirect to '/albums'
 end
