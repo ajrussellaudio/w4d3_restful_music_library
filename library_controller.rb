@@ -47,3 +47,7 @@ post '/artists/:id/delete' do
 end
 
 # album routes
+
+get '/albums/new' do
+  erb(:'albums/new')
+end
