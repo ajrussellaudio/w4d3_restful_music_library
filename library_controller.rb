@@ -75,3 +75,8 @@ get '/albums/:id/edit' do
   @artists = Artist.all()
   erb(:'albums/edit')
 end
+
+post '/albums/:id' do
+  Album.update(params)
+  redirect to "/albums/#{params['id']}"
+end
