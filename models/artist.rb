@@ -10,6 +10,11 @@ class Artist
     return artists.map { |artist| Artist.new(artist) }
   end
 
+  def self.update(options)
+    sql = "UPDATE artists SET name = '#{options['name']}' WHERE id = #{options['id']};"
+    SqlRunner.run( sql )
+  end
+
   def initialize( options )
     @name = options["name"]
     @id   = options["id"].to_i
