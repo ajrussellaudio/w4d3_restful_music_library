@@ -29,3 +29,8 @@ get '/artists/:id/edit' do
   @artist = Artist.find(params['id'])
   erb(:'artists/edit')
 end
+
+post '/artists/:id' do
+  Artist.update(params)
+  redirect to "/artists/#{params['id']}"
+end
