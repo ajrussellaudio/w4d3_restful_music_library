@@ -49,5 +49,6 @@ end
 # album routes
 
 get '/albums/new' do
+  @artists = Artist.all()
   erb(:'albums/new')
 end

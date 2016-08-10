@@ -1,6 +1,16 @@
 <h3>New Album</h3>
 
 <form action="/albums" method="post">
+
+  <label for="artist_id"></label>
+  <select name="artist_id">
+    <% @artists.each do |artist| %>
+      <option value=<% artist.id %>><%= artist.name %></option>
+    <% end %>
+  </select>
+  
   <label for="title">Title:</label>
   <input type="text" name="title">
+
+  <input type="submit" value="Create Album">
 </form>
