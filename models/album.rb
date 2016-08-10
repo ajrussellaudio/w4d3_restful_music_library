@@ -8,4 +8,10 @@ class Album
     @id        = options["id"].to_i
   end
 
+  def save()
+    sql = "INSERT INTO albums (name, artist_id) VALUES ('#{@name}', #{artist_id}) RETURNING * ;"
+    album = SqlRunner.run( sql ).first
+    @id = album['id'].to_i
+  end
+
 end
