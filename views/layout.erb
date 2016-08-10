@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Big Al's Music Library</title>
+  <title>iChoons | <%= @page_title %></title>
 </head>
 <body>
   <h1>iChoons</h1>
-  <a href="/artists">Artists</a>
+  <h3><%= @page_title %></h3>
+  <ul>
+    <li><a href="/artists">Artists</a></li>
+    <li><a href="/albums">Albums</a></li>
+    <li><a href="/library">Library</a></li>
+  </ul>
   <%= yield %>
 </body>
 </html>
