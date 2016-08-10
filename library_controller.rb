@@ -55,7 +55,6 @@ end
 
 post '/albums' do
   @album = Album.new(params)
-  # binding.pry
   @album.save()
   erb(:'albums/create')
 end
@@ -64,4 +63,9 @@ get '/albums' do
   @albums = Album.all
   @artists = Artist.all
   erb(:'albums/index')
+end
+
+get '/albums/:id' do
+  @album = Album.find( params['id'] )
+  erb(:'albums/show')
 end

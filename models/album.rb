@@ -8,6 +8,13 @@ class Album
     return albums.map { |album| Album.new(album) }
   end
 
+  def self.find(id)
+    sql = "SELECT FROM albums WHERE id = #{id};"
+    album = SqlRunner.run( sql ).first
+    binding.pry
+    return Album.new(album)
+  end
+
   def initialize( options )
     @title     = options["title"]
     @artist_id = options["artist_id"].to_i
