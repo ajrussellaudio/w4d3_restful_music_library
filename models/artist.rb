@@ -17,7 +17,8 @@ class Artist
 
   def self.find(id)
     sql = "SELECT * FROM artists WHERE id = #{id};"
-    return SqlRunner.run( sql ).first
+    artist = SqlRunner.run( sql ).first
+    return Artist.new(artist)
   end
 
   def initialize( options )
