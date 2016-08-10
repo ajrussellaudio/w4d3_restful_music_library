@@ -21,6 +21,11 @@ class Artist
     return Artist.new(artist)
   end
 
+  def self.destroy(id)
+    sql = "DELETE FROM artists WHERE id = #{id};"
+    SqlRunner.run( sql )
+  end
+
   def initialize( options )
     @name = options["name"]
     @id   = options["id"].to_i
