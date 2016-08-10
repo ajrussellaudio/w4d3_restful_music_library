@@ -61,7 +61,7 @@ end
 
 get '/albums' do
   @albums = Album.all
-  @artists = Artist.all
+  binding.pry
   erb(:'albums/index')
 end
 

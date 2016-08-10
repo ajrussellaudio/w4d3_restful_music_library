@@ -1,4 +1,4 @@
 <h3>All Albums</h3>
 <% @albums.each do |album| %>
-  <p><%= album.title %></p>
+  <p><%= album.title %> (by <%= album.artist.name %>)</p>
 <% end %>

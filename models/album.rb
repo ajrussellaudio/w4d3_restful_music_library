@@ -9,9 +9,8 @@ class Album
   end
 
   def self.find(id)
-    sql = "SELECT FROM albums WHERE id = #{id};"
+    sql = "SELECT * FROM albums WHERE id = #{id};"
     album = SqlRunner.run( sql ).first
-    binding.pry
     return Album.new(album)
   end
 
@@ -28,7 +27,7 @@ class Album
   end
 
   def artist()
-    sql = "SELECT FROM artists WHERE id = #{@artist_id};"
+    sql = "SELECT * FROM artists WHERE id = #{@artist_id};"
     artist = SqlRunner.run( sql ).first
     return Artist.new(artist)
   end
