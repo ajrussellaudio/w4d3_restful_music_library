@@ -2,7 +2,7 @@
 <% @artists.each do |artist| %>
   <p><%= artist.name %></p> 
   <p><a href="/artists/<%= artist.id %>/edit">Edit</a></p>
-  <form action="/artist/<%= artist.id %>/delete" method="post">
+  <form action="/artists/<%= artist.id %>/delete" method="post">
     <input type="submit" value="Delete">
   </form>
   <hr>
