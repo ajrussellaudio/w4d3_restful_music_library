@@ -89,6 +89,5 @@ end
 
 get '/library' do
   @artists = Artist.all
-  @albums = Album.all
   erb(:library)
 end

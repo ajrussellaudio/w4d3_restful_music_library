@@ -1,0 +1,10 @@
+<% @page_title = "Library" %>
+
+<% @artists.each do |artist| %>
+  <h5><%= artist.name %></h5>
+  <ul>
+  <% artist.albums.each do |album| %>
+    <li><%= album.title %></li>
+  <% end %>
+  </ul>
+<% end %>
