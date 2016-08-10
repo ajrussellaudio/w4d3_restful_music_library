@@ -14,3 +14,8 @@ post '/artists' do
   @artist.save()
   erb(:'artists/create')
 end
+
+get '/artists' do
+  @artists = Artist.all()
+  erb(:'artists/index')
+end
