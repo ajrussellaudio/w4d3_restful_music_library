@@ -9,5 +9,5 @@ CREATE TABLE artists (
 CREATE TABLE albums (
   id SERIAL4 PRIMARY KEY,
   title VARCHAR(255),
-  album_id INT4 REFERENCES artists(id) ON DELETE CASCADE
+  artist_id INT4 REFERENCES artists(id) ON DELETE CASCADE
 );

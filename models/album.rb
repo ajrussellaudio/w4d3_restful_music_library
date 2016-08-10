@@ -3,7 +3,7 @@ class Album
   attr_reader :title, :artist_id, :id
 
   def initialize( options )
-    @title      = options["title"]
+    @title     = options["title"]
     @artist_id = options["artist_id"].to_i
     @id        = options["id"].to_i
   end

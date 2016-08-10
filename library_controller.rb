@@ -52,3 +52,10 @@ get '/albums/new' do
   @artists = Artist.all()
   erb(:'albums/new')
 end
+
+post '/albums' do
+  @album = Album.new(params)
+  binding.pry
+  @album.save()
+  erb(:'albums/create')
+end
