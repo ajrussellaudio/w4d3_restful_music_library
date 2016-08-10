@@ -34,3 +34,8 @@ post '/artists/:id' do
   Artist.update(params)
   redirect to "/artists/#{params['id']}"
 end
+
+post '/artists/:id/delete' do
+  Artist.destroy(params['id'])
+  redirect to "/artists"
+end
