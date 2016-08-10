@@ -5,6 +5,12 @@ require "pry-byebug"
 require_relative "./models/artist"
 require_relative "./models/album"
 
+get '/' do
+  erb(:home)
+end
+
+# artist routes
+
 get '/artists/new' do
   erb(:'artists/new')
 end
@@ -39,3 +45,5 @@ post '/artists/:id/delete' do
   Artist.destroy(params['id'])
   redirect to "/artists"
 end
+
+# album routes
