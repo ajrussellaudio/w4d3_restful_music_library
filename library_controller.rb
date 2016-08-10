@@ -84,3 +84,11 @@ post '/albums/:id/delete' do
   Album.destroy( params['id'] )
   redirect to '/albums'
 end
+
+# library routes
+
+get '/library' do
+  @artists = Artist.all
+  @albums = Album.all
+  erb(:library)
+end

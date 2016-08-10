@@ -1,5 +1,8 @@
 <% @page_title = "All Artists" %>
 
+<a href="/artists/new">Add Artist</a>
+<hr>
+
 <% @artists.each do |artist| %>
   <p><%= artist.name %></p> 
   <p><a href="/artists/<%= artist.id %>/edit">Edit</a></p>
@@ -8,3 +11,4 @@
   </form>
   <hr>
 <% end %>
+

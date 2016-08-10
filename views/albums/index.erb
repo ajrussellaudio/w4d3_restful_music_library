@@ -1,5 +1,7 @@
 <% @page_title = "All Albums" %>
 
+<a href="/albums/new">Add Album</a>
+
 <% @albums.each do |album| %>
   <p><%= album.title %> (by <%= album.artist.name %>)</p>
   <a href="/albums/<%= album.id %>/edit">Edit</a>
